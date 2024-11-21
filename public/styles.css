@@ -1,0 +1,130 @@
+/* General Styles */
+body, html {
+    height: 100%; /* Ensure body and html take up full height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    padding: 0;
+    margin: 0; /* Remove any default margin */
+    justify-content: space-between;
+    height: 100vh; /* Full viewport height */
+    background-color: #064683;
+}
+
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin: 10px 0 10px 20px;
+    height: 70px;
+    width: auto;
+}
+
+
+
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    margin: 0; /* Remove top and bottom margin */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.call-to-action p {
+    margin: 0; /* Remove bottom margin */
+}
+
+
+/* New Section with Big Text and Button */
+.intro {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.apply-button {
+    display: inline-block;
+    background-color: #33C63A;
+    color: white;
+    font-size: 2rem;
+    padding: 30px 60px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+.apply-button:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+.apply-now-button{
+    color: antiquewhite;
+}
+
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.job-listings {
+    margin-top: 20px;
+}
+
+.job-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

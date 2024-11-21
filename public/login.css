@@ -1,0 +1,66 @@
+/* General form styling */
+form {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fafafa;
+}
+
+/* Heading style */
+form h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form groups for labels and inputs */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input fields styling */
+form input[type="email"], form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Button styling */
+form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Placeholder styling */
+form input::placeholder {
+    color: #999;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}

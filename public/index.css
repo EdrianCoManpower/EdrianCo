@@ -1,0 +1,251 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    padding: 0;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url('img/wallpaer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container for Both Boxes */
+.box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+    max-width: 90%; 
+    margin: 10px auto 0 auto; 
+    text-align: center;
+    padding: 0 10px;
+}
+
+.intro {
+padding: auto;
+}
+
+
+.intro h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.job-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.job-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: auto;
+    height: 170px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.view-jobs {
+    margin-top: 20px;
+}
+
+/* Job List */
+.job-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.job-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.view-jobs {
+    display: inline-block;
+    background-color: #33C63A;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.view-jobs:hover {
+    background-color: #28a429;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.spacer {
+    height: 20px;
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Added gap between the columns */
+}
+
+.column {
+    flex: 1;
+    max-width: 600px; /* Added max-width for better control */
+    padding: 20px;
+}
+
+.left-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.right-column h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.right-column p {
+    font-size: 26px;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.button {
+    display: inline-block;
+    background-color: #33c63a;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 700;
+    margin-bottom: auto;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #28a745;
+}
+
+/* Responsive Design for Small Devices */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 15px;
+    }
+
+    .job-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .job-card {
+        height: 200px; /* Increase height to make it look balanced on smaller screens */
+    }
+
+    .columns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .right-column h2 {
+        font-size: 28px;
+    }
+
+    .right-column p {
+        font-size: 20px;
+    }
+
+    .button {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Responsive Design for Extra Small Devices */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem; /* Adjust title size */
+        text-align: center; /* Center align on small screens */
+    }
+
+    .job-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .job-card {
+        height: 160px; /* Adjust height for better spacing on small screens */
+    }
+
+    .view-jobs {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .newsletter-section {
+        padding: 15px;
+    }
+
+    .left-column img {
+        max-width: 90%; /* Slightly reduce image size */
+    }
+
+    .right-column h2 {
+        font-size: 24px;
+    }
+
+    .right-column p {
+        font-size: 18px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
