@@ -1,34 +1,43 @@
-// 1. Import necessary dependencies
+require('dotenv').config();
 const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 
-// 2. Initialize Supabase client
-const supabaseUrl = 'https://dtxxdcrfsdgntufwjlab.supabase.co';  // Replace with your actual Supabase URL
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR0eHhkY3Jmc2RnbnR1ZndqbGFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzIxNDk0NjIsImV4cCI6MjA0NzcyNTQ2Mn0.oXINP_MH4CUDOiBmCz_GaZE_Q9lwGkvzi8qj2N-rXF4';  // Replace with your actual Supabase anon key
+// Initialize Supabase client
+const supabaseUrl = process.env.SUPABASE_URL;  // Use env variable
+const supabaseKey = process.env.SUPABASE_KEY;  // Use env variable
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// 3. Initialize Express app
+// Initialize Express app
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-// 4. Set up body parser to handle JSON requests (optional, based on your needs)
+// Set up body parser to handle JSON requests
 app.use(bodyParser.json());
 
-// 5. Serve static files from the 'public' folder (optional, for serving HTML, CSS, JS files)
+// Serve static files from the 'public' folder
 app.use(express.static('public'));
 
-// 6. Define a route for the root
+// Serve the index.html file on root route
 app.get('/', (req, res) => {
-    res.send('index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
-// 7. Define a route for the login page
+// Serve a login form on the /login route
 app.get('/login', (req, res) => {
-    res.send('<h1>Login Page</h1>');
+    res.send(`
+        <h1>Login Page</h1>
+        <form action="/login" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    `);
 });
 
-// 8. Define a route to handle login functionality (using Supabase authentication)
+// Handle login functionality using Supabase
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -45,12 +54,12 @@ app.post('/login', async (req, res) => {
     res.json({ message: 'Login successful', user: data.user });
 });
 
-// 9. Start the server and listen on the specified port
+// Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
-// 10. Global error handlers
+// Global error handlers
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
