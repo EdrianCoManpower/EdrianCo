@@ -7,17 +7,20 @@ body {
 }
 
 header {
-    background-color: #333;
     padding: 10px 0;
     color: white;
     text-align: center;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+
+
+h2 {
+    text-align: center;         /* Center the text horizontally */
+    color: white;               /* Change text color to white */
+    font-size: 24px;            /* Optional: adjust the font size as needed */
+    margin-bottom: 20px;        /* Optional: add space below the heading */
 }
+
 
 /* Styling the jobs section */
 #jobs {
@@ -27,20 +30,34 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Manage button container styling */
-.manage-button-container {
-    display: flex;
-    justify-content: flex-end; /* Move the button to the right */
-    margin-bottom: 20px;
+/* Column container styling */
+.columnto {
+    display: flex;               /* Use flexbox to align elements */
+    flex-direction: column;      /* Stack the buttons vertically */
+    align-items: flex-end;       /* Align the buttons to the right */
+    margin-right: 20px;          /* Space from the right edge */
 }
 
+/* Each button will be treated as a block-level element */
+.columnto button {
+    width: 100%;                 /* Make the buttons take up the full width of the column */
+    max-width: 200px;            /* Set a max width for the buttons */
+    margin-bottom: 10px;         /* Add space between buttons */
+}
+
+
 /* Styling the manage button */
+.manage-button-container {
+    display: flex;
+    justify-content: right;  /* Center the manage button */
+}
+
 .manage-button {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     font-size: 16px;
+    align-items: flex-end;       /* Align the buttons to the right */
     border: none;
     border-radius: 6px;
     cursor: pointer;

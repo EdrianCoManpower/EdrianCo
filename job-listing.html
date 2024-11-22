@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+    <link rel="stylesheet" href="navbarfooter.css">
+    <link rel="stylesheet" href="job-listing.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="managejobs.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.18.0/dist/umd/supabase.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<div id="navbar"></div>
+
+<header>
+
+    <h2> Available Jobs</h2>
+</header>
+    
+
+    <div class="existing-jobs-container">
+
+        <div class="columnto">
+            <!-- Manage button positioned at the top with spacing -->
+            <div class="manage-button-container">
+             <button class="manage-button" onclick="window.location.href='login.html'">Manage jobs</button>
+         </div>
+        </div>
+
+        <button id="sortButton">Sort: Newest to Oldest</button>
+        <div id="jobsList" class="jobs-list-container">
+            <!-- Dynamically added jobs will appear here -->
+          </div>
+          <div id="pagination-controls">
+            <button id="prev-btn" onclick="prevPage()" disabled>Previous</button>
+            <span id="page-number">Page 1 of 1</span>
+            <button id="next-btn" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+
+  <script src="navbarfooter.js"></script>
+  <script type="module" src="job-listing.js"></script>
+
+  
+</body>
+</html>
