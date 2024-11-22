@@ -4,6 +4,10 @@ const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 
+// Log environment variables to check if they are loaded correctly
+console.log('SUPABASE_URL:', process.env.SUPABASE_URL);
+console.log('SUPABASE_KEY:', process.env.SUPABASE_KEY);
+
 // Initialize Supabase client using environment variables
 const supabaseUrl = process.env.SUPABASE_URL;  
 const supabaseKey = process.env.SUPABASE_KEY;  
