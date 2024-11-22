@@ -1,0 +1,288 @@
+/* Apply general body styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #064683;
+}
+
+/* Style the navbar and footer for full width */
+#navbar,
+#footer {
+    width: 100%; /* Full width */
+    color: white;
+    text-align: center;
+}
+
+/* Constrain the main content width */
+.manage-jobs-title,
+.form-container,
+.existing-jobs-container {
+    max-width: 1500px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the content horizontally */
+    margin-top: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px; /* Add spacing between pagination buttons */
+}
+
+#prev-btn,
+#next-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+}
+
+#prev-btn:disabled,
+#next-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.manage-jobs-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding:  5px 20px;
+}
+
+
+.form-container {
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+.form-container form {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 0;
+    padding: 10px;
+    min-width: 200px; /* Set minimum width for each field */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5          px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 38px;
+}
+
+.form-group textarea {
+    min-height: 38px;
+    height: 38px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    min-width: 200px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 55px;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* managejobs.css */
+
+/* Styling for the existing jobs container */
+.existing-jobs-container {
+    margin: auto auto; /* Center horizontally with auto margin */
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 1500px; /* Set a maximum width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+
+/* Styling for the title of the existing jobs */
+.existing-jobs-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Styling for the container that holds the list of jobs */
+.jobs-list-container {
+    display: flex;
+    flex-direction: column; /* Stack job items vertically */
+}
+
+
+/* Styling for each job item */
+.job-item {
+    background-color: #fff;
+    margin-bottom: 10px; /* Reduced bottom margin */
+    padding: 20px; /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 130px; /* Adjusted the min-height to make the items more compact */
+    gap: 15px; /* Adjusted gap between content and buttons */
+}
+
+.job-content {
+    flex: 1; /* Take up available space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Evenly distribute content */
+}
+
+.job-location {
+    background-color: #28a745; /* Green background */
+    padding: 5px 10px; /* Add some padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* White font color */
+    font-style: italic; /* Italic font */
+}
+
+
+.job-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.job-content p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.job-content a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.job-content a:hover {
+    text-decoration: underline;
+}
+
+.job-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    min-width: 100px; /* Ensure a consistent width for the button container */
+}
+
+.job-buttons button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    width: 100%; /* Ensure buttons stretch to container width */
+}
+
+.job-buttons .delete-btn {
+    background-color: #dc3545;
+}
+
+.job-buttons button.edit-btn {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .job-buttons button.edit-btn:hover {
+    background-color: #007bff;
+  }
+  
+  .job-buttons button.save-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .job-buttons button.save-btn:hover {
+    background-color: #0b7dda;
+  }
+  
+  .job-buttons button.delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .job-buttons button.delete-btn:hover {
+    background-color: #e60000;
+  }
+  
+  /* Disabled buttons (used when editing or when no action is available) */
+  .job-buttons button:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+  }
+
+
+

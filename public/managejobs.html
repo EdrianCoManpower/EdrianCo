@@ -6,16 +6,62 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="navbarfooter.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="managejobs.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.18.0/dist/umd/supabase.min.js"></script>
+
 </head>
 <body>
 
-    <div id="navbar-admin"></div>
+    <div id="navbar"></div>
 
-    <h1>Welcome to the Dashboard</h1>
-    <p>You are now logged in as an admin.</p>
+    <h1 class="manage-jobs-title">Manage Jobs</h1>
+    <div class="form-container">
+        <form id="addJobForm">
+            <div class="form-group">
+                <label for="jobName">Job Title:</label>
+                <input type="text" id="jobName" name="jobName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="jobDescription" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jobLink">Application Link:</label>
+                <input type="url" id="jobLink" name="jobLink" placeholder="Enter application link (URL)" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Add Job</button>
+            </div>
+        </form>
+    </div>
+    
+
+    
+    <div class="existing-jobs-container">
+        <h2 class="existing-jobs-title">Existing Jobs</h2>
+        <button id="sortButton">Sort: Newest to Oldest</button>
+        <div id="jobsList" class="jobs-list-container">
+            <!-- Dynamically added jobs will appear here -->
+          </div>
+          <div id="pagination-controls">
+            <button id="prev-btn" onclick="prevPage()" disabled>Previous</button>
+            <span id="page-number">Page 1 of 1</span>
+            <button id="next-btn" onclick="nextPage()">Next</button>
+        </div>
+       
+    </div>
 
     <div id="footer"></div>
 
     <script src="navbarfooter.js"></script>
+    <script type="module" src="managejobs.js"></script>
 </body>
-</html>
+
