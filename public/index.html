@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="navbarfooter.css">
+    <link rel="stylesheet" href="featuredjobs.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.18.0/dist/umd/supabase.min.js"></script>
+
+   
 </head>
 <body>                               
 
@@ -21,18 +25,20 @@
     </section>
 </header>
 
-<div class="container">
+<div class="existing-jobs-container">
     <div class="box-wrapper">
         <!-- Featured Jobs Section -->
         <section class="section featured-jobs">
             <h2 class="section-title">Featured Jobs</h2>
-            <div id="admin-jobs-list" class="job-cards">
-                <!-- Dynamically populated jobs will go here -->
+            <div id="jobsList" class="jobs-list-container">
+                <!-- Dynamically added jobs will appear here -->
             </div>
             <a href="job-listing.html" class="view-jobs">View All Jobs</a>
         </section>      
     </div>
 </div>
+
+
 
 <div class="newsletter-section">
     <div class="spacer"></div>
@@ -56,6 +62,7 @@
 
 <!-- External JavaScript file -->
 <script src="navbarfooter.js"></script>
+<script type="module" src="index.js"></script>
 
 </body>
 </html>

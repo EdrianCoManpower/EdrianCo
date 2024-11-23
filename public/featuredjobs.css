@@ -1,0 +1,126 @@
+/* General Layout */
+.manage-jobs-title,
+.form-container,
+.existing-jobs-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 25px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.no-jobs {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff9f9;
+    margin: 20px 0;
+}
+
+/* Base styles for the existing job containers */
+.existing-jobs-container {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1500px;
+    box-sizing: border-box;
+}
+
+.jobs-list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between job items */
+}
+
+.job-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.job-item:hover {
+    background-color: #f8f9fa;
+}
+
+.job-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.job-location {
+    background-color: #28a745;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-style: italic;
+    font-size: 14px;
+    align-self: flex-start;
+}
+
+.job-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.job-content p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.job-content small {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+
+/* Small screens (Mobile devices) */
+@media (max-width: 767px) {
+    .jobs-list-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+
+    .job-content h3 {
+        font-size: 18px;
+    }
+
+    .job-content p {
+        font-size: 14px;
+    }
+}
+
+/* Medium screens (Tablets and smaller desktops) */
+@media (max-width: 1024px) {
+    .jobs-list-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+
+    .job-item { 
+        padding: 18px;
+    }
+}
+
+/* Large screens (Desktops) */
+@media (min-width: 1025px) {       
+    .jobs-list-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    }
+
+    .job-item {
+        padding: 20px;
+    }
+}

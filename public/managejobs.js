@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch and display existing jobs from Supabase
   async function loadJobs() {
     const { data: jobs, error, count } = await supabase
-      .from('jobs')
-      .select('*', { count: 'exact' }) // Get exact count of jobs
-      .order('posted_date', { ascending: currentSortOrder === 'asc' }) // Sort by posted_date based on the current order
-      .range((currentPage - 1) * jobsPerPage, currentPage * jobsPerPage - 1); // Pagination logic
+        .from('jobs')
+        .select('*', { count: 'exact' }) // Get exact count of jobs
+        .order('posted_date', { ascending: currentSortOrder === 'asc' }) // Sort by posted_date based on the current order
+        .range((currentPage - 1) * jobsPerPage, currentPage * jobsPerPage - 1); // Pagination logic
 
     if (error) {
-      console.error('Error fetching jobs:', error);
-      return;
+        console.error('Error fetching jobs:', error);
+        return;
     }
 
     totalJobs = count; // Set the total job count
@@ -31,14 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const jobsList = document.getElementById('jobsList');
     jobsList.innerHTML = '';
 
-    // Display the jobs on the page
-    jobs.forEach(job => {
-      displayJob(job);
-    });
+    if (jobs.length === 0) {
+        // Display "No jobs available" if the list is empty
+        jobsList.innerHTML = `<div class="no-jobs">No jobs available at the moment.</div>`;
+    } else {
+        // Display the jobs on the page
+        jobs.forEach(job => {
+            displayJob(job);
+        });
+    }
 
     // Update pagination controls
     updatePagination();
-  }
+}
+
 
 // Function to display a job
 function displayJob(job) {

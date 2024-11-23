@@ -1,18 +1,11 @@
 /* Apply general body styles */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background-color: #064683;
-}
+
 
 /* Style the navbar and footer for full width */
 #navbar,
 #footer {
     width: 100%;
     color: white;
-    text-align: center;
 }
 
 .manage-jobs-title,
@@ -25,6 +18,14 @@ body {
     box-sizing: border-box;
     color: white;
 }
+
+.no-jobs {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff9f9;
+    margin: 20px 0;
+}
+
 
 /* Pagination controls */
 #pagination-controls {
