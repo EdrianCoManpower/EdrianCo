@@ -58,7 +58,7 @@
                             <div class="d-flex align-items-center">
                                 <div class="small">
                                     <p class="fw-bold"> Location: ${job.location}</p>
-                                    <div class="text-muted">Posted on: ${new Date(job.posted_date).toLocaleDateString()}</div>
+                                    <div class="text-muted">Posted on: ${new Date(job.posted_date).toLocaleString()}</div>
                                 </div>
                             </div>
                         </div>
