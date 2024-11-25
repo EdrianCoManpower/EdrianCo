@@ -2,7 +2,7 @@
 
 h2 {
     text-align: center;         /* Center the text horizontally */
-    color: white;               /* Change text color to white */
+    color: 333;               /* Change text color to white */
     font-size: 24px;            /* Optional: adjust the font size as needed */
     margin-bottom: 20px;        /* Optional: add space below the heading */
 }
@@ -54,47 +54,97 @@ h2 {
     background-color: #45a049;
 }
 
-/* Styling the available jobs section */
-.available-jobs {
-    margin-top: 30px;
+/* Job Content Styles */
+.job-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1); /* Added multiple shadows for depth */
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.available-jobs h2 {
+
+.job-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
     color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.available-jobs ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+.job-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-.available-jobs ul li {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin: 5px 0;
+.job-location {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.job-content small {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Apply Now Button Styling */
+.job-content a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 6px 12px;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-left: auto;  /* Ensures the button is pushed to the right */
+    align-self: flex-end;  /* Aligns the button to the right within the flex container */
 }
 
-.available-jobs ul li:hover {
-    background-color: #f1f1f1;
+
+.job-content a:hover {
+    background-color: #0056b3;
+    color: #fff;
 }
 
+/* Adjustments for button */
+.job-content a:focus, .job-content a:active {
+    outline: none;
+    background-color: #0056b3;
+}
 
-/* Mobile responsiveness */
-@media screen and (max-width: 600px) {
-    #jobs {
-        padding: 20px;
+/* Layout adjustments for flexbox */
+.job-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-content {
+        padding: 15px;
     }
 
-    .manage-button {
-        padding: 10px 15px;
+    .job-content h3 {
+        font-size: 16px;
     }
 
-    .available-jobs ul li {
-        padding: 8px;
+    .job-description,
+    .job-location {
+        font-size: 13px;
+    }
+
+    .job-content a {
+        font-size: 12px;
     }
 }
+

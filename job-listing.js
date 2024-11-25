@@ -7,7 +7,7 @@ const supabase = createClient(
 );
 
 let currentPage = 1;
-const jobsPerPage = 4;
+const jobsPerPage = 6;
 let totalJobs = 0; // Track total number of jobs
 let currentSortOrder = 'desc'; // Default to 'newest to oldest'
 
@@ -48,25 +48,26 @@ async function loadJobs() {
 
 
 
-  // Function to display a job
-  function displayJob(job) {
-    const jobElement = document.createElement('div');
-    jobElement.className = 'job-item';
-    jobElement.dataset.id = job.id; // Store the job ID for future reference
-
-    jobElement.innerHTML = `
+function displayJob(job) {
+  const jobElement = document.createElement('div');
+  jobElement.className = 'col-lg-4 mb-5';  // Ensure the card has the correct width
+  jobElement.dataset.id = job.id; // Store the job ID for future reference
+  
+  jobElement.innerHTML = `
       <div class="job-content">
-        <h3>${job.title}</h3>
-        <p><strong>Description: </strong><span class="job-description">${job.description}</span></p>
+        <h3> Job Title: ${job.title}</h3>
+        <p><strong>Description: </strong><span class="job-description"> ${job.description}</span></p>
         <p><strong>Location:</strong> <span class="job-location">${job.location}</span></p>
         <p><small>Posted on: ${new Date(job.posted_date).toLocaleString()}</small></p>
         ${job.jobLink ? `<p><a href="${job.jobLink}" target="_blank">Apply Now</a></p>` : ''}
       </div>
+    
     `;
 
-    // Append the new job to the jobs list on the page
-    document.getElementById('jobsList').appendChild(jobElement);
-  }
+  // Append the new job to the jobs list on the page
+  document.getElementById('jobsList').appendChild(jobElement);
+}
+
 
   // Update pagination controls
   function updatePagination() {

@@ -16,7 +16,6 @@
     margin-top: 15px;
     padding: 25px;
     box-sizing: border-box;
-    color: white;
 }
 
 .no-jobs {
@@ -157,11 +156,9 @@
 }
 
 .job-location {
-    background-color: #28a745;
     padding: 5px 10px;
     border-radius: 10px;
-    color: white;
-    font-style: italic;
+    color: #555;
 }
 
 .job-content h3 {

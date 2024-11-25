@@ -1,56 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs</title>
-    <link rel="stylesheet" href="navbarfooter.css">
-    <link rel="stylesheet" href="job-listing.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="managejobs.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.18.0/dist/umd/supabase.min.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css\navbarfooter.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/job-listing.css">
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.18.0/dist/umd/supabase.min.js"></script>
 
 
-</head>
-<body>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
 
-<!-- Navigation -->
-<div id="navbar"></div>
+         <!-- Navigation-->
+             <div id="navbar"></div>
 
-<header>
+            
 
-    <h2> Available Jobs</h2>
-</header>
-    
+             <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center">
+                                <h2 class="fw-bolder">Explore Job Opportunities</h2>
+                                <p class="lead fw-normal text-muted mb-5">    Discover your next career move! Explore more job opportunities and take the next step in your professional journey.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="existing-jobs-container">
 
-        <div class="columnto">
-            <!-- Manage button positioned at the top with spacing -->
-            <div class="manage-button-container">
-             <button class="manage-button" onclick="window.location.href='login.html'">Manage jobs</button>
-         </div>
-        </div>
+            
+                    <!-- Job Listings Section -->
+                    <div class="columnto">
+                        <!-- Manage button positioned at the top with spacing -->
+                        <div class="manage-button-container">
+                         <button class="manage-button " onclick="window.location.href='login.html'">Manage jobs</button>
+                     </div>
+                    </div>
+                    <button id="sortButton">Sort: Newest to Oldest</button>
 
-        <button id="sortButton">Sort: Newest to Oldest</button>
-        <div id="jobsList" class="jobs-list-container">
-            <!-- Dynamically added jobs will appear here -->
-          </div>
-          <div id="pagination-controls">
+                    <div class="row gx-5" id="jobsList">
+                        <!-- Job Cards will be dynamically inserted here by JavaScript -->
+                    </div>
+        <div id="pagination-controls">
             <button id="prev-btn" onclick="prevPage()" disabled>Previous</button>
             <span id="page-number">Page 1 of 1</span>
             <button id="next-btn" onclick="nextPage()">Next</button>
         </div>
-    </div>
+
+        </main>
 
 
-  <!-- Footer -->
-  <div id="footer"></div>
+                    <!-- Footer -->
+            <div id="footer"></div>
 
-
-  <script src="navbarfooter.js"></script>
-  <script type="module" src="job-listing.js"></script>
-
-  
-</body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="navbarfooter.js"></script>
+        <script type="module" src="job-listing.js"></script>
+    </body>
 </html>

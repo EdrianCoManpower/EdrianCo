@@ -48,6 +48,11 @@
     color: white;
     margin: 0;
 }
+
+.footer-column h3{
+  margin-top: 10px ;
+}
+
 #pages {
     display: flex;
     flex-direction: column;
@@ -56,10 +61,6 @@
     margin: 20px; /* Default margin for larger screens */
 }
 
-#pages h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
 
 #pages a {
     text-decoration: none;

@@ -54,8 +54,8 @@ function displayJob(job) {
   
     jobElement.innerHTML = `
       <div class="job-content">
-        <h3>${job.title}</h3>
-        <p><strong>Description: </strong><span class="job-description">${job.description}</span></p>
+        <h3> Job Title: ${job.title}</h3>
+        <p><strong>Description: </strong><span class="job-description"> ${job.description}</span></p>
         <p><strong>Location:</strong> <span class="job-location">${job.location}</span></p>
         <p><small>Posted on: ${new Date(job.posted_date).toLocaleString()}</small></p>
         ${job.jobLink ? `<p><a href="${job.jobLink}" target="_blank">Apply Now</a></p>` : ''}
