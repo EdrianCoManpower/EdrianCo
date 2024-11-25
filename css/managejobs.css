@@ -120,14 +120,7 @@
 /* Responsive Design */
 
 /* Base styles for the existing job containers */
-.existing-jobs-container {
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 1500px;
-    box-sizing: border-box;
-}
+
 
 .jobs-list-container {
     display: flex;
@@ -138,7 +131,6 @@
     background-color: #fff;
     margin-bottom: 10px;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
