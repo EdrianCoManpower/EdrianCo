@@ -12,23 +12,20 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const app = express();
 const port = 3000;
 
-// 4. Set up body parser to handle JSON requests (optional, based on your needs)
+// 4. Set up body parser to handle JSON requests
 app.use(bodyParser.json());
 
-// 5. Serve static files from the 'public' folder (optional, for serving HTML, CSS, JS files)
-app.use(express.static('public'));
-
-// 6. Define a route for the root
+// 5. Define a route for the root
 app.get('/', (req, res) => {
-    res.send('index.html');
+    res.send('<h1>Welcome to the Home Page</h1>');
 });
 
-// 7. Define a route for the login page
+// 6. Define a route for the login page
 app.get('/login', (req, res) => {
     res.send('<h1>Login Page</h1>');
 });
 
-// 8. Define a route to handle login functionality (using Supabase authentication)
+// 7. Define a route to handle login functionality (using Supabase authentication)
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
@@ -45,12 +42,12 @@ app.post('/login', async (req, res) => {
     res.json({ message: 'Login successful', user: data.user });
 });
 
-// 9. Start the server and listen on the specified port
+// 8. Start the server and listen on the specified port
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
-// 10. Global error handlers
+// 9. Global error handlers
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });

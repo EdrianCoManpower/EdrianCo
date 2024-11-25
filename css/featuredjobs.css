@@ -33,16 +33,25 @@
     gap: 20px; /* Space between job items */
 }
 
+
+
+.no-jobs {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #002752;
+}
+
+
 .job-item {
     background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
+    gap: 20px;
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
